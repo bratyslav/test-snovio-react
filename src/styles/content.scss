@@ -45,4 +45,16 @@ $content-icon-color: #393b3d;
   }
 }
 
+@media (max-width: 450px) {
+  .top-section {
+    &__avatar {
+      margin-left: 10px;
+    }
+  }
+
+  .content__wrapper {
+    padding: 30px 10px 10px 40px;
+  }
+}
+
 @import 'search';

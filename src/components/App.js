@@ -18,7 +18,7 @@ const App = () => {
       <Navigation />
       <label htmlFor="nav-toggle" className="navigation-visibility-label">
         {
-          navIsVisible ? <span style={{marginLeft: "7px"}}>x</span> : '➡'
+          navIsVisible ? <span style={{marginLeft: "0px"}}>✖</span> : '➡'
         }
       </label>
 

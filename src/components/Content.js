@@ -8,7 +8,7 @@ const Content = () => {
           <label htmlFor="search">
             <div className="search__icon">⚲</div>
           </label>
-          <input type="text" className="search__input" id="search"/>
+          <input type="text" className="search__input" id="search" />
         </form>
 
         <img

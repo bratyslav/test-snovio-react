@@ -1,10 +1,21 @@
 import React from 'react';
+const classNames = require('classnames');
 
-const NavigationItem = ({ user }) => {
+const NavigationItem = ({ user, activate }) => {
+  const itemMarginClassName = classNames({
+    'nav-item__left-margin': !user.isActive,
+    'nav-item__left-margin -nav-item-left-margin-active': user.isActive
+  });
+
+  const itemWrapperClassName = classNames({
+    'nav-item__wrapper': !user.isActive,
+    'nav-item__wrapper -nav-item-active': user.isActive
+  });
+
   return (
-    <li>
-      <div className="nav-item__wrapper">
-        <div className="nav-item__left-margin"></div>
+    <li onClick={() => activate(user.id)}>
+      <div className={itemWrapperClassName}>
+        <div className={itemMarginClassName} />
 
         <div className="nav-item">
           <img
