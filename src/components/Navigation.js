@@ -38,12 +38,10 @@ const Navigation = () => {
       <h2 className="header__subscriptions">subscriptions</h2>
 
       <ul className="navigation__item-list">
-        <li onClick={() => activate('all')}>
-          <div className={itemWrapperClassName}>
-            <div className={itemMarginClassName} />
-            <div className="nav-item__all-avatar">ilex</div>
-            All subscriptions
-          </div>
+        <li onClick={() => activate('all')} className={itemWrapperClassName}>
+          <div className={itemMarginClassName} />
+          <div className="nav-item__all-avatar">ilex</div>
+          All subscriptions
         </li>
         {
           userList.map(user => (
