@@ -1,7 +1,12 @@
-.test {
-  &__mytest {
-    color: green;
-    text-align: center;
-  }
+$main-font: 'Arial';
+$main-color: white;
+
+body {
+  margin: 0;
+  font-family: $main-font;
+  color: $main-color;
 }
+
+@import "nav";
+@import "content";
 

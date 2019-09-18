@@ -1,0 +1,32 @@
+.search {
+  display: flex;
+  align-items: center;
+
+  height: 40px;
+  width: 100%;
+
+  padding: 0 15px;
+
+  border-radius: 20px;
+  background-color: $content-item-background-color;
+
+  &__input {
+    width: 100%;
+
+    color: white;
+    background-color: $content-item-background-color;
+    border: none;
+    outline: none;
+  }
+
+  &__icon {
+    margin-right: 10px;
+
+    font-size: 25px;
+    font-weight: bold;
+    color: $content-icon-color;
+    cursor: pointer;
+
+    transform: rotate(-45deg);
+  }
+}

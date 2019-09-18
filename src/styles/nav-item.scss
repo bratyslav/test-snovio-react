@@ -1,0 +1,38 @@
+.nav-item {
+  &__wrapper {
+    display: flex;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: $nav-active-color;
+    }
+  }
+
+  &__left-margin {
+    width: 5px;
+    height: 50px;
+  }
+
+  display: flex;
+  align-items: center;
+
+  &__avatar {
+    width: 32px;
+    height: 32px;
+
+    margin: 0 10px 0 25px;
+
+    border-radius: 16px;
+  }
+}
+
+.-nav-item-left-margin-active {
+  background-color: #009c64;
+}
+
+.-nav-item-active {
+  background-color: #005d3f;
+}

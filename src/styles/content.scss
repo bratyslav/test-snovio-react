@@ -1,0 +1,48 @@
+$content-item-background-color: #292929;
+$content-icon-color: #393b3d;
+
+.content {
+  &__wrapper {
+    padding: 30px 30px 30px 290px;
+    min-height: 200vh;
+
+    background-color: #222222;
+  }
+
+  &__header {
+    margin-top: 45px;
+
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+}
+
+
+.top-section {
+  display: flex;
+  align-items: center;
+
+  &__avatar {
+    margin-left: 50px;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 16px;
+  }
+
+  &__triangle-icon {
+    margin-left: 5px;
+
+    color: $content-icon-color;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 800px) {
+  .content__wrapper {
+    padding-left: 0;
+  }
+}
+
+@import 'search';

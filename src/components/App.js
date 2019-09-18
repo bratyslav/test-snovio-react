@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Navigation from "./Navigation";
+import Content from './Content';
 
 import '../styles/App.css';
 
@@ -6,7 +8,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1 className="test__mytest">My React AppA!</h1>
+        <input type="checkbox" className="navigation-visibility-toggle" id="nav-toggle"/>
+        <Navigation />
+        <label htmlFor="nav-toggle" className="navigation-visibility-label">➡</label>
+
+        <Content />
       </div>
     );
   }

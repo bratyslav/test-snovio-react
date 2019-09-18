@@ -1,0 +1,90 @@
+$nav-width: 260px;
+$nav-background-color: #00563c;
+$nav-active-color: #004B34;
+
+.navigation {
+  position: fixed;
+
+  width: $nav-width;
+  height: 100vh;
+  z-index: 2;
+
+  background-color: $nav-background-color;
+
+  &__item-list {
+    padding-left: 0;
+
+    list-style-type: none;
+  }
+}
+
+.header {
+  margin-block-start: 30px;
+  margin-block-end: 40px;
+
+  font-size: 40px;
+  text-align: center;
+
+  &__subscriptions {
+    margin-left: 25px;
+    margin-block-end: 30px;
+
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+}
+
+.navigation-visibility-label {
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  z-index: 2;
+
+  width: 30px;
+
+  font-size: 30px;
+  background-color: $nav-background-color;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: $nav-active-color;
+  }
+}
+
+.navigation-visibility-toggle {
+  display: none;
+  position: fixed;
+}
+
+@media (max-width: 800px) {
+  .navigation {
+    margin-left: -($nav-width);
+  }
+
+  .navigation-visibility-toggle {
+    display: block;
+    width: 1px;
+
+    &:checked ~ .navigation {
+      margin-left: 0;
+
+      transition: margin linear 200ms;
+    }
+
+    &:checked ~ .navigation-visibility-label {
+      left: $nav-width;
+
+      transition: left linear 200ms;
+    }
+  }
+
+  .navigation-visibility-label {
+    display: block;
+  }
+}
+
+@import "nav-item";
