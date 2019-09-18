@@ -1,21 +1,30 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import Navigation from "./Navigation";
 import Content from './Content';
 
 import '../styles/App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <input type="checkbox" className="navigation-visibility-toggle" id="nav-toggle"/>
-        <Navigation />
-        <label htmlFor="nav-toggle" className="navigation-visibility-label">➡</label>
+const App = () => {
+  const [navIsVisible, toggleNavVisibility] = useState(false);
 
-        <Content />
-      </div>
-    );
-  }
+  return (
+    <div>
+      <input
+        type="checkbox"
+        className="navigation-visibility-toggle"
+        id="nav-toggle"
+        onChange={() => toggleNavVisibility(!navIsVisible)}
+      />
+      <Navigation />
+      <label htmlFor="nav-toggle" className="navigation-visibility-label">
+        {
+          navIsVisible ? <span style={{marginLeft: "7px"}}>x</span> : '➡'
+        }
+      </label>
+
+      <Content />
+    </div>
+  );
 }
 
 export default App;

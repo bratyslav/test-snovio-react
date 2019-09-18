@@ -19,13 +19,21 @@
   display: flex;
   align-items: center;
 
-  &__avatar {
+  &__avatar,
+  &__all-avatar {
     width: 32px;
     height: 32px;
 
     margin: 0 10px 0 25px;
 
     border-radius: 16px;
+  }
+
+  &__all-avatar {
+    font-size: 12px;
+    text-align: center;
+    line-height: 32px;
+    background-color: #656769;
   }
 }
 
