@@ -16,15 +16,12 @@ const NavigationItem = ({ user, activate }) => {
     <li onClick={() => activate(user.id)}>
       <div className={itemWrapperClassName}>
         <div className={itemMarginClassName} />
-
-        <div className="nav-item">
-          <img
-            alt="avatar"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuXgk28cnbUBSSM18oK_3YjcXDdnbiDLjNzRpqAs1_Xhu3uTb9"
-            className="nav-item__avatar"
-          />
-          {user.name}
-        </div>
+        <img
+          alt="avatar"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuXgk28cnbUBSSM18oK_3YjcXDdnbiDLjNzRpqAs1_Xhu3uTb9"
+          className="nav-item__avatar"
+        />
+        {user.name}
       </div>
     </li>
   );

@@ -41,11 +41,8 @@ const Navigation = () => {
         <li onClick={() => activate('all')}>
           <div className={itemWrapperClassName}>
             <div className={itemMarginClassName} />
-
-            <div className="nav-item">
-              <div className="nav-item__all-avatar">ilex</div>
-              All subscriptions
-            </div>
+            <div className="nav-item__all-avatar">ilex</div>
+            All subscriptions
           </div>
         </li>
         {
