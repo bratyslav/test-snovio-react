@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Loader from "./Loader";
 
 const CommentInput = ({ isVisible, toggleVisibility }) => {
+  const [loading, startLoading] = useState(false);
+
+  const sendComment = (event) => {
+    event.preventDefault();
+
+    startLoading(true);
+  };
+
   return (
     <div
       className="comment-input"
-      style={isVisible ? {"display": "block"} : {"display": "none"}}
+      style={isVisible ? {"display": "block"} : {"display": "block"}}
     >
       <section className="comment-input__header-section">
         <h2 className="comment-input__header">Add comment</h2>
@@ -15,9 +24,18 @@ const CommentInput = ({ isVisible, toggleVisibility }) => {
           ✖
         </button>
       </section>
-      <form>
+      <form onSubmit={sendComment}>
         <textarea className="comment-input__textarea" />
-        <input type="submit" className="comment-input__add-comment-button" value="ADD COMMENT"/>
+        {
+          loading
+            ? <Loader />
+
+            : <input
+                type="submit"
+                className="comment-input__add-comment-button"
+                value="ADD COMMENT"
+              />
+        }
       </form>
     </div>
   );
