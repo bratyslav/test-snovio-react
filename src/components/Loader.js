@@ -1,13 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const Loader = ({ toggleVisibility }) => {
+const Loader = ({ closeCommentInput }) => {
   const [itemClassName, setItemClassName] = useState('');
 
   const timeout = setTimeout(() => {
     setItemClassName('-loaded');
 
-    const closetimeout = setTimeout(() => toggleVisibility(false), 2000);
+    const closetimeout = setTimeout(() => {
+      closeCommentInput();
+    }, 2000);
   }, 4200);
+
+  useEffect(() => {
+    return () => {
+      clearTimeout(timeout);
+    };
+  });
 
   return (
     <div className="loader">

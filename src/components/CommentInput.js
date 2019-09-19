@@ -3,6 +3,13 @@ import Loader from "./Loader";
 
 const CommentInput = ({ isVisible, toggleVisibility }) => {
   const [loading, startLoading] = useState(false);
+  const [message, recordMessage] = useState('');
+
+  const closeCommentInput = () => {
+    toggleVisibility(false);
+    startLoading(false);
+    recordMessage('');
+  };
 
   const sendComment = (event) => {
     event.preventDefault();
@@ -18,17 +25,21 @@ const CommentInput = ({ isVisible, toggleVisibility }) => {
       <section className="comment-input__header-section">
         <h2 className="comment-input__header">Add comment</h2>
         <button
-          onClick={() => toggleVisibility(false)}
+          onClick={closeCommentInput}
           className="comment-input__close-button"
         >
           ✖
         </button>
       </section>
       <form onSubmit={sendComment}>
-        <textarea className="comment-input__textarea" />
+        <textarea
+          className="comment-input__textarea"
+          value={message}
+          onChange={(event) => recordMessage(event.target.value)}
+        />
         {
           loading
-            ? <Loader toggleVisibility={toggleVisibility} />
+            ? <Loader closeCommentInput={closeCommentInput} />
 
             : <input
                 type="submit"

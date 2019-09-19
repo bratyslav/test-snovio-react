@@ -2,12 +2,17 @@ $nav-width: 260px;
 $nav-background-color: #00563c;
 $nav-active-color: #004B34;
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .navigation {
   position: fixed;
 
   width: $nav-width;
   height: 100vh;
   z-index: 2;
+  overflow: scroll;
 
   background-color: $nav-background-color;
 
