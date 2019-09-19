@@ -36,14 +36,12 @@ const ContentItem = ({ post }) => {
         </div>
         <div className="content-item__comments-count">
           <svg className="comments-icon"><g><ellipse id="ellipse" cx="6" cy="6" rx="6" ry="5" /><path id="triangle" d="M2 9, 4 10, 0 13" /></g></svg>
-          {post.comments.length}
+          &nbsp;{post.comments.length}
         </div>
-
         <div className="content-item-active__comments-header">Comments</div>
-
         {
           post.comments.map(comment => (
-            <div className="content-item-active__comment">{comment} <hr /></div>
+            <div key={comment} className="content-item-active__comment">{comment} <hr /></div>
           ))
         }
       </div>
