@@ -1,14 +1,32 @@
 .content-item {
-  &__wrapper {
-    padding: 20px;
-    background-color: $content-item-background-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 20px 20px 0;
+
+  font-size: 14px;
+  background-color: $content-item-background-color;
+
+  &>div {
+    margin-bottom: 20px;
   }
 
   &__title {
     margin-block-start: 0;
     margin-block-end: 0;
 
+    line-height: 30px;
     font-size: 22px;
     text-transform: capitalize;
   }
 }
+
+
+
+.comments-icon {
+  width: 12px;
+  height: 12px;
+}
+
+#ellipse, #triangle {fill: #666666;}

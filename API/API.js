@@ -49,7 +49,7 @@ export const posts = [
   },
   {
     "id": 4,
-    "title": "programming language",
+    "title": "programming language, available language",
     "body": "The first high-level programming language was Plankalkül, created by Konrad Zuse between 1942 and 1945. The first high-level language to have an associated compiler was created by Corrado Böhm in 1951, for his PhD thesis. The first commercially available language was FORTRAN (FORmula TRANslation); developed in 1956 (first manual appeared in 1956, but first developed in 1954) by a team led by John Backus at IBM.",
     "comments": [
       "created by Konrad Zuse between 1942 and 1945",
