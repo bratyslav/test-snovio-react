@@ -8,6 +8,8 @@ import '../styles/App.css';
 const App = () => {
   const [navIsVisible, toggleNavVisibility] = useState(false);
 
+  const [commentInputIsVisible, toggleCommentInputVisibility] = useState(false);
+
   return (
     <div>
       <input
@@ -23,9 +25,12 @@ const App = () => {
         }
       </label>
 
-      <Content />
+      <Content toggleCommentInputVisibility={toggleCommentInputVisibility} />
 
-      <CommentInput />
+      <CommentInput
+        isVisible={commentInputIsVisible}
+        toggleVisibility={toggleCommentInputVisibility}
+      />
     </div>
   );
 }

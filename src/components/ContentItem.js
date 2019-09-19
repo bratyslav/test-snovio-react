@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ContentItem = ({ post }) => {
+const ContentItem = ({ post, toggleCommentInputVisibility }) => {
   const [isHover, toggleHover] = useState(false);
 
   return (
@@ -44,7 +44,10 @@ const ContentItem = ({ post }) => {
             <div key={comment} className="content-item-active__comment">{comment} <hr /></div>
           ))
         }
-        <button className="content-item-active__add-comment-button">
+        <button
+          className="content-item-active__add-comment-button"
+          onClick={() => toggleCommentInputVisibility(true)}
+        >
           Add Comment
         </button>
       </div>

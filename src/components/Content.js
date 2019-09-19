@@ -2,7 +2,7 @@ import React from 'react';
 import { posts } from '../../API/API';
 import ContentItem from "./ContentItem";
 
-const Content = () => {
+const Content = ({ toggleCommentInputVisibility }) => {
   return (
     <main className="content__wrapper">
       <section className="top-section">
@@ -25,7 +25,13 @@ const Content = () => {
 
       <section className="content">
         {
-          posts.map(post => <ContentItem key={post.id} post={post} />)
+          posts.map(post => (
+            <ContentItem
+              key={post.id}
+              post={post}
+              toggleCommentInputVisibility={toggleCommentInputVisibility}
+            />
+          ))
         }
       </section>
     </main>

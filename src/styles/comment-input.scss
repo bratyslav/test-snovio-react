@@ -1,13 +1,95 @@
+$comment-input-background-color: #fbfbfb;
+
 .comment-input {
   display: none;
   z-index: 3;
   position: fixed;
   top: calc(50% - 150px);
-  left: calc(50% - 150px);
+  left: calc(50% - 220px);
 
-  width: 300px;
+  padding: 35px 40px;
+  box-sizing: border-box;
+
+  width: 440px;
   height: 300px;
 
   color: black;
-  background-color: white;
+  background-color: $comment-input-background-color;
+  border-radius: 5px;
+
+  &__header-section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__header {
+    margin-block-start: 0;
+    margin-block-end: 0;
+
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  &__close-button {
+    padding: 0;
+
+    border: none;
+    outline: none;
+    background-color: $comment-input-background-color;
+    cursor: pointer;
+    color: grey;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(1);
+    }
+  }
+
+  &__textarea {
+    margin-top: 30px;
+
+    width: 100%;
+    height: 120px;
+    box-sizing: border-box;
+
+    resize: none;
+    outline: none;
+    border-color: #dadada;
+  }
+
+  &__add-comment-button {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 10px 0;
+    margin-top: 15px;
+
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    background-color: #00563c;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    &:active {
+      transform: scale(1);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .comment-input {
+    width: 300px;
+    height: 260px;
+    padding: 15px 20px;
+    left: calc(50% - 150px);
+  }
 }
