@@ -13,7 +13,7 @@ const CommentInput = ({ isVisible, toggleVisibility }) => {
   return (
     <div
       className="comment-input"
-      style={isVisible ? {"display": "block"} : {"display": "block"}}
+      style={isVisible ? {"display": "block"} : {"display": "none"}}
     >
       <section className="comment-input__header-section">
         <h2 className="comment-input__header">Add comment</h2>
@@ -28,7 +28,7 @@ const CommentInput = ({ isVisible, toggleVisibility }) => {
         <textarea className="comment-input__textarea" />
         {
           loading
-            ? <Loader />
+            ? <Loader toggleVisibility={toggleVisibility} />
 
             : <input
                 type="submit"

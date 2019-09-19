@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
-const Loader = () => {
+const Loader = ({ toggleVisibility }) => {
   const [itemClassName, setItemClassName] = useState('');
 
   const timeout = setTimeout(() => {
     setItemClassName('-loaded');
 
-    // const closetimeout = setTimeout(() => )
+    const closetimeout = setTimeout(() => toggleVisibility(false), 2000);
   }, 4200);
 
   return (
