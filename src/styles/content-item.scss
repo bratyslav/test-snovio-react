@@ -1,0 +1,14 @@
+.content-item {
+  &__wrapper {
+    padding: 20px;
+    background-color: $content-item-background-color;
+  }
+
+  &__title {
+    margin-block-start: 0;
+    margin-block-end: 0;
+
+    font-size: 22px;
+    text-transform: capitalize;
+  }
+}

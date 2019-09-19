@@ -1,4 +1,6 @@
 import React from 'react';
+import { posts } from '../../API/API';
+import ContentItem from "./ContentItem";
 
 const Content = () => {
   return (
@@ -19,8 +21,12 @@ const Content = () => {
         <div className="top-section__triangle-icon">▼</div>
       </section>
 
-      <section>
-        <h2 className="content__header">today</h2>
+      <h2 className="content__header">today</h2>
+
+      <section className="content">
+        {
+          posts.map(post => <ContentItem key={post.id} post={post} />)
+        }
       </section>
     </main>
   );
