@@ -8,15 +8,16 @@ const Navigation = () => {
     { ...user, isActive: false }
   )));
   const [isActiveAll, toggleActiveAll] = useState(true);
+  const [isHover, toggleHover] = useState(false);
 
   const itemMarginClassName = classNames({
     'nav-item__left-margin': !isActiveAll,
-    'nav-item__left-margin -nav-item-left-margin-active': isActiveAll
+    'nav-item__left-margin -nav-item-left-margin-active': isActiveAll || isHover
   });
 
   const itemWrapperClassName = classNames({
     'nav-item__wrapper': !isActiveAll,
-    'nav-item__wrapper -nav-item-active': isActiveAll
+    'nav-item__wrapper -nav-item-active': isActiveAll || isHover
   });
 
   const activate = (id) => {
@@ -38,7 +39,12 @@ const Navigation = () => {
       <h2 className="header__subscriptions">subscriptions</h2>
 
       <ul className="navigation__item-list">
-        <li onClick={() => activate('all')} className={itemWrapperClassName}>
+        <li
+          onClick={() => activate('all')}
+          onMouseOver={() => toggleHover(true)}
+          onMouseLeave={() => toggleHover(false)}
+          className={itemWrapperClassName}
+        >
           <div className={itemMarginClassName} />
           <div className="nav-item__all-avatar">ilex</div>
           All subscriptions
