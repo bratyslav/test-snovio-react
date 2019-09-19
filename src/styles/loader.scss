@@ -15,7 +15,7 @@
     border-radius: 6px;
     background-color: #00efc5;
 
-    animation: scaling 1200ms ease-in-out 3;
+    animation: loading 1200ms ease-in-out 3;
   }
 
   &>div:nth-child(2) {
@@ -23,11 +23,11 @@
   }
 
   &>div:nth-child(3) {
-    animation-delay: 600ms;
+    animation-delay: 500ms;
   }
 }
 
-@keyframes scaling {
+@keyframes loading {
   from {
     transform: scale(1);
   }
@@ -38,5 +38,59 @@
 
   to {
     transform: scale(1);
+  }
+}
+
+
+
+
+.-loaded:nth-child(1) {
+  animation: none;
+  transition: all 500ms linear;
+  transform: translate(21px, 0);
+}
+
+.-loaded:nth-child(2) {
+  z-index: 2;
+  transition: all 500ms linear;
+  transition-delay: 500ms;
+  transform: scale(2);
+  background-color: #3ebcff;
+}
+
+.-loaded:nth-child(3) {
+  animation: none;
+  transition: all 500ms linear;
+  transform: translate(-21px, 0);
+}
+
+@keyframes loaded {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.5);
+  }
+}
+
+#check {
+  fill: none;
+  stroke: white;
+  stroke-width: 1;
+  stroke-dasharray: 18;
+  stroke-dashoffset: 18;
+  animation: draw 2s ease 1s 1;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
   }
 }
