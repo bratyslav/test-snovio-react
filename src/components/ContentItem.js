@@ -44,6 +44,9 @@ const ContentItem = ({ post }) => {
             <div key={comment} className="content-item-active__comment">{comment} <hr /></div>
           ))
         }
+        <button className="content-item-active__add-comment-button">
+          Add Comment
+        </button>
       </div>
     </div>
   );

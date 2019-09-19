@@ -1,0 +1,13 @@
+.comment-input {
+  display: none;
+  z-index: 3;
+  position: fixed;
+  top: calc(50% - 150px);
+  left: calc(50% - 150px);
+
+  width: 300px;
+  height: 300px;
+
+  color: black;
+  background-color: white;
+}

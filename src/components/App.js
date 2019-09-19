@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navigation from "./Navigation";
 import Content from './Content';
+import CommentInput from "./CommentInput";
 
 import '../styles/App.css';
 
@@ -23,6 +24,8 @@ const App = () => {
       </label>
 
       <Content />
+
+      <CommentInput />
     </div>
   );
 }

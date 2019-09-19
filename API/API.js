@@ -28,7 +28,7 @@ export const posts = [
   },
   {
     "id": 2,
-    "title": "high-level programming",
+    "title": "high-level programming to have an associated compiler",
     "body": "The first high-level language to have an associated compiler was created by Corrado Böhm in 1951, for his PhD thesis. The first commercially available language was FORTRAN (FORmula TRANslation); developed in 1956 (first manual appeared in 1956, but first developed in 1954) by a team led by John Backus at IBM.",
     "comments": [
       "high-level programming",
@@ -38,7 +38,7 @@ export const posts = [
   },
   {
     "id": 3,
-    "title": "The first high-level",
+    "title": "programming language, The first high-level",
     "body": "The first commercially available language was FORTRAN (FORmula TRANslation); developed in 1956 (first manual appeared in 1956, but first developed in 1954) by a team led by John Backus at IBM. The first high-level language to have an associated compiler was created by Corrado Böhm in 1951, for his PhD thesis.",
     "comments": [
       "commercially available language",
