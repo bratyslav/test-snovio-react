@@ -13,12 +13,12 @@ const ContentItem = ({ post }) => {
         <div className="content-item__title-wrapper">
           <h3 className="content-item__title">{post.title}</h3>
         </div>
-        <div>
+        <div className="content-item__body">
           {post.body}
         </div>
-        <div>
+        <div className="content-item__comments-count">
           <svg className="comments-icon"><g><ellipse id="ellipse" cx="6" cy="6" rx="6" ry="5" /><path id="triangle" d="M2 9, 4 10, 0 13" /></g></svg>
-          <span className="content-item__comments-count">{post.comments.length}</span>
+          &nbsp;{post.comments.length}
         </div>
       </div>
 
@@ -34,9 +34,9 @@ const ContentItem = ({ post }) => {
         <div>
           {post.body}
         </div>
-        <div>
+        <div className="content-item__comments-count">
           <svg className="comments-icon"><g><ellipse id="ellipse" cx="6" cy="6" rx="6" ry="5" /><path id="triangle" d="M2 9, 4 10, 0 13" /></g></svg>
-          <span className="content-item__comments-count">{post.comments.length}</span>
+          {post.comments.length}
         </div>
 
         <div className="content-item-active__comments-header">Comments</div>
