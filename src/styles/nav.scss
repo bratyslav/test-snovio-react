@@ -11,7 +11,7 @@ $nav-active-color: #004B34;
 
   width: $nav-width;
   height: 100vh;
-  z-index: 2;
+  z-index: 3;
   overflow: scroll;
 
   background-color: $nav-background-color;
@@ -42,11 +42,15 @@ $nav-active-color: #004B34;
 .navigation-visibility-label {
   display: none;
   position: fixed;
-  top: 80px;
+  top: 70px;
   left: 0;
-  z-index: 2;
+  z-index: 3;
 
-  width: 30px;
+  line-height: 60px;
+  height: 60px;
+  width: 40px;
+
+  padding-left: 10px;
 
   font-size: 30px;
   background-color: $nav-background-color;
@@ -63,6 +67,7 @@ $nav-active-color: #004B34;
 .navigation-visibility-toggle {
   display: none;
   position: fixed;
+  opacity: 0;
 }
 
 @media (max-width: 800px) {
