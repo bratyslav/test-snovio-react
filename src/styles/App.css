@@ -289,7 +289,7 @@ body {
     box-sizing: border-box;
     resize: none;
     outline: none;
-    border-color: #dadada; }
+    border: 1px solid #dadada; }
   .comment-input__add-comment-button {
     width: 100%;
     box-sizing: border-box;
